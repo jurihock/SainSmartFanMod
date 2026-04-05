@@ -19,7 +19,7 @@ This project is about replacing the default AC fan in the [SainSmart solder fume
 
 ### Electrical
 
-In fact, the Noctua fan draws around 2A during the initial turn. As I'm unsure whether my 1.5A PSU can handle this current for a second or two, I decided to use a logic-level MOSFET to switch the fan on. Adding an additional cap between 10uF and 100uF increases the Miller effect, forcing the fan to start up slowly and reducing the initial current as well. But in this case, an NPN transistor is needed to ground the PWM output against the N-MOSFET drain.
+In fact, the Noctua fan draws around 2A during the initial turn. As I'm unsure whether my 1.5A PSU can handle this current for a second or two, I decided to use a logic-level MOSFET to switch the fan on. Adding an additional cap between 10uF and 100uF increases the Miller effect, forcing the fan to start up slowly and reducing the initial current as well. But in this case, an NPN transistor is needed to ground the PWM signal against the N-MOSFET drain.
 
 I'm also unsure whether a DC fan requires a flyback diode. I decided to skip it for now.
 
