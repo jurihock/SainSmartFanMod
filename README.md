@@ -15,9 +15,9 @@ This project is about replacing the default AC fan in the [SainSmart solder fume
 - MOSFET switch to turn the fan on or off using MCU
 - pot with a large knob 🫠 to select the fan speed
 
-# How?
+## How?
 
-![](Assets/Front.png)
-![](Assets/Back.png)
-![](Assets/FanMounting.png)
-![](Assets/PcbMounting.png)
+![](Assets/Front.jpg)
+![](Assets/Back.jpg)
+![](Assets/FanMounting.jpg)
+![](Assets/PcbMounting.jpg)
