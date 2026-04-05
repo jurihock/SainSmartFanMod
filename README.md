@@ -8,14 +8,26 @@ This project is about replacing the default AC fan in the [SainSmart solder fume
 - it runs at constant speed only
 - the power cable is way too stiff
 
-## What?
+## Features
 
 - toggle switch to power the device on or off integrated in the housing
 - dual LED to indicate power on and standby
 - MOSFET switch to turn the fan on or off using MCU
 - pot with a large knob 🫠 to select the fan speed
 
-## How?
+## Thoughts
+
+### Electrical
+
+In fact, the Noctua fan draws around 2A during the initial turn. As I'm unsure whether my 1.5A PSU can handle this current for a second or two, I decided to use a logic-level MOSFET to switch the fan on. Adding an additional cap between 10uF and 100uF increases the Miller effect, forcing the fan to start up slowly and reducing the initial current as well. But in this case, an NPN transistor is needed to ground the PWM output against the N-MOSFET drain.
+
+I'm also unsure whether a DC fan requires a flyback diode. I decided to skip it for now.
+
+### Mechanical
+
+The JST connectors are intentionally placed on the edges, which puts mechanical stress on the board. There is certainly a better solution for connector placement.
+
+## How it looks like
 
 ![](Assets/Front.jpg)
 ![](Assets/Back.jpg)
